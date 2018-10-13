@@ -1,0 +1,9 @@
+
+public class JoseException extends Exception {
+	
+	
+	public JoseException (String message) {
+		super(message);
+	}
+
+}
