@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class UsaAnimalException {
+	
+	public UsaAnimalException(String animal) throws AnimalException{
+		
+		if(animal == "dog") {
+			throw new AnimalException("é um dog");
+		}else {
+			System.out.println("nao é um dog");
+		}
+	}
+	public static void main(String args[]) {
+		UsaAnimalException animal = null;
+		
+		try {
+			animal = new UsaAnimalException("dog");
+		}catch(AnimalException e) {
+			System.out.println(e.getLocalizedMessage());
+			
+		}
+	}
+
+}
