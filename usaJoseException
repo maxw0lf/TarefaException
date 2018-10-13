@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class UsaException {
+	
+	public UsaException(int numero) throws  JoseException
+	{
+		if(numero != 51) {
+			throw new JoseException("dose de 51 insuficiente");
+		}else {
+			System.out.println("voce ja esta bebado o suficiente");
+		}
+	}
+	
+	public static void main(String args[]) {
+		UsaException dose = null;
+		
+		try {
+			dose = new UsaException(51);
+		}catch(JoseException e) {
+			System.out.println(e.getLocalizedMessage());
+		}
+		
+	}
+
+}
